@@ -68,6 +68,24 @@ point1.x = 50
 print(point1.x) #output- 50
 
 # inheritance
+# inheritance means a class can copy and use the features (variables and functions) of another parent class.
 
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    def talk(self):
+        print(f"Hi, I am {self.name} and I am {self.age} years old.")
+
+
+person1 = Person("John", 30)
+
+person1.talk()
+
+class Car:
+    def drive(self):
+        print("I am driving!")
+
+class Truck(Car):   # Car is the parent class. Truck class inherit all methods from the Car class.
 
 
