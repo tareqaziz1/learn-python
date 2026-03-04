@@ -61,6 +61,13 @@ class Points:
 point1 = Points(5.5, 2.3)
 point2 = Points(2.1, 3.3)
 
-
 print(point1.add_axis())
 print(point2.add_axis())
+
+point1.x = 50
+print(point1.x) #output- 50
+
+# inheritance
+
+
+
