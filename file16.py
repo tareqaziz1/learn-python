@@ -82,10 +82,22 @@ person1 = Person("John", 30)
 
 person1.talk()
 
-class Car:
-    def drive(self):
-        print("I am driving!")
+class Vehicle:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
 
-class Truck(Car):   # Car is the parent class. Truck class inherit all methods from the Car class.
+    def start(self):
+        print(f"{self.brand} is starting!")
+
+    def stop(self):
+        print(f"{self.brand} is stopped!")
+
+
+
+class Cars(Vehicle): # Vehicle is the parent class. Cars class inherit all methods from the Vehicle class.
+
+
+
 
 
