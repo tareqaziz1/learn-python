@@ -95,9 +95,6 @@ class Vehicle:
 
 
 
-class Cars(Vehicle): # Vehicle is the parent class. Cars class inherit all methods from the Vehicle class.
-
-
 
 
 
