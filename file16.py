@@ -109,7 +109,7 @@ class Ford(Vehicle):
 
 ford1 = Ford("Ford", 2025)
 ford1.start()
-ford1.engine(True)
+ford1.engine(True)    # Now ford1 object has inherited methods (start, stop) and also its own method (engine).
 
 
 
