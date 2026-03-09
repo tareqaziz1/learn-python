@@ -19,3 +19,14 @@ class Dice:
 
 dice1 = Dice()
 print(dice1.roll())
+
+class Lottery:
+    def winner(self, players):
+        winner_name = random.choice(players)
+        return winner_name
+
+
+lottery1 = Lottery()
+won = lottery1.winner(["Mohammed", "Robin", "Sarah"])
+print(won)
+
