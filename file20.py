@@ -3,7 +3,9 @@
 # working with Excell sheets
 
 import openpyxl as xl
+from openpyxl.chart import BarChart, Reference
 from pathlib import Path
+
 
 path = ("./others/transactions.xlsx")
 workbook = xl.load_workbook(path)
@@ -38,5 +40,13 @@ for row in range(2, sheet.max_row+1):
     discounted_price_cell.value = discounted_price
     print(discounted_price_cell.value)
 
+values = Reference(sheet, min_row = 16,
+          max_row = 20,
+          min_col = 4,
+          max_col = 4)
+
+chart = BarChart()
+chart.add_data(values)
+sheet.add_chart(chart, 'g2')
 
 workbook.save('./others/transaction_updated_version.xlsx')
