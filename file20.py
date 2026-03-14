@@ -47,6 +47,7 @@ values = Reference(sheet, min_row = 16,
 
 chart = BarChart()
 chart.add_data(values)
+chart.title = "| Discounted Price |"
 sheet.add_chart(chart, 'g2')
 
 workbook.save('./others/transaction_updated_version.xlsx')
