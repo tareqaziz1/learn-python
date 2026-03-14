@@ -26,3 +26,17 @@ for row in sheet.iter_rows(values_only=True):
     print("\t".join(str(cell) for cell in row))
 '''
 
+# Make a new row for 20% discounted price
+
+
+sheet.cell(row=1, column=4).value = "discounted_price"      # add header for the new column
+
+for row in range(2, sheet.max_row+1):
+    cell = sheet.cell(row, 3)
+    discounted_price = cell.value * 0.80  # 20% discount
+    discounted_price_cell = sheet.cell(row, 4)
+    discounted_price_cell.value = discounted_price
+    print(discounted_price_cell.value)
+
+
+workbook.save('./others/transaction_updated_version.xlsx')
