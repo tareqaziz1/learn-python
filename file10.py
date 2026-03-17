@@ -79,4 +79,5 @@ for col in range(num_cols):
     avg = total / num_rows
     averages.append(avg)
 
-print("Averages:", averages)
+print("Averages:", averages)   # Shows all averages of each array number
+
