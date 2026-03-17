@@ -60,19 +60,22 @@ for row in matrix:
 #Exercise
 
 data = [
-    [10,20,30],
-    [11,12,13],
-    [15,30,45],
-    [30,60,90]
+    [10, 20, 30],
+    [11, 12, 13],
+    [15, 30, 45],
+    [30, 60, 90]
 ]
 
-num_of_row = len(data)
-num_of_column = len(data[3])
+num_rows = len(data)
+num_cols = len(data[0])
 
-average = []
+averages = []
 
-for col in range(num_of_column):
+for col in range(num_cols):
     total = 0
-    for row in range(num_of_row):
-        total = data[row][col]
+    for row in range(num_rows):
+        total += data[row][col]
+
+    avg = total / num_rows
+    averages.append(avg)
 
