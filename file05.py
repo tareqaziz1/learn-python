@@ -15,6 +15,8 @@ print(fac) #output = 24
 sqrt = math.sqrt(64)
 print(sqrt) #output = 8
 
+gcd = math.gcd(25,90)
+print(gcd) #output = 5
 ''''
 sqrt(x) : Computes the square root of x.
 pow(x, y) : Raises x to the power of y.
