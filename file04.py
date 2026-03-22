@@ -23,3 +23,6 @@ print(x_round) # output = 5
 y = -5
 y_absolute = abs(y)
 print(y_absolute) #output = 5
+
+p = 3**3
+print(p)
