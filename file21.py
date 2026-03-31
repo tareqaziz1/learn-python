@@ -14,4 +14,3 @@ for row in sheet.iter_rows(values_only=True):
     print(row)
 
 sheet.cell(row=1, column=4).value = "increased_price"
-print(sheet.cell(row=1,column=4).value)
