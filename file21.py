@@ -31,10 +31,26 @@ for row in range(2, sheet.max_row + 1):
     total_cost_cell.value = total_cost
     print(total_cost_cell.value)
 
+# Make a value range based on price. Low (≤10), Medium (11–19), or High (≥20)
+
+sheet.cell(row = 1, column = 6).value = "value_range"
+
+for row in range(2, sheet.max_row + 1):
+    price = sheet.cell(row, 3).value
+    if price <= 10:
+        value = "Low value"
+    elif price <= 20:
+        value = "Medium value"
+    elif price >= 20:
+        value = "High value"
+    else:
+        value = "none"
+
+    sheet.cell(row, 6).value = value
+
+    print(sheet.cell(row, 6).value)
 
 for row in sheet.iter_rows(values_only=True):
     print(row)
-
-
 
 #workbook.save('./others/transaction_updated_version2.xlsx')
