@@ -34,3 +34,7 @@ for row in range(2, sheet.max_row + 1):
 
 for row in sheet.iter_rows(values_only=True):
     print(row)
+
+
+
+#workbook.save('./others/transaction_updated_version2.xlsx')
