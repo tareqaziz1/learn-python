@@ -1,4 +1,5 @@
 # more Excel operations
+import math
 
 import openpyxl as xl
 
@@ -48,9 +49,19 @@ for row in range(2, sheet.max_row + 1):
 
     sheet.cell(row, 6).value = value
 
-    print(sheet.cell(row, 6).value)
+# Make a column for profit. (Every product has 30% profit margin)
+
+sheet.cell(row = 1, column = 7).value = "profit"
+
+for row in range(2, sheet.max_row + 1):
+    cell_profit = sheet.cell(row, 7)
+    cell_price = sheet.cell(row, 3).value
+    cell_profit.value = round(cell_price * 0.30, 2)            # 30% profit
+
+
 
 for row in sheet.iter_rows(values_only=True):
     print(row)
+
 
 #workbook.save('./others/transaction_updated_version2.xlsx')
