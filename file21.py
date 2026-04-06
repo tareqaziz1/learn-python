@@ -1,9 +1,7 @@
 # more Excel operations
-import math
-
 import openpyxl as xl
 
-path = ("./others/transactions.xlsx")
+path = "./others/transactions.xlsx"
 workbook = xl.load_workbook(path)
 sheet = workbook["Sheet1"]
 
@@ -58,10 +56,15 @@ for row in range(2, sheet.max_row + 1):
     cell_price = sheet.cell(row, 3).value
     cell_profit.value = round(cell_price * 0.30, 2)            # 30% profit
 
+from datetime import datetime
 
+sheet.cell(row=1, column=8).value = "year"
+
+for row in range(2, sheet.max_row + 1):
+    sheet.cell(row, 8).value = datetime.now().year
 
 for row in sheet.iter_rows(values_only=True):
     print(row)
 
 
-#workbook.save('./others/transaction_updated_version2.xlsx')
+workbook.save('./others/transaction_updated_version2.xlsx')
