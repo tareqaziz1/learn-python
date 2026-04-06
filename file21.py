@@ -1,5 +1,6 @@
 # more Excel operations
 import openpyxl as xl
+from openpyxl.styles import PatternFill
 
 path = "./others/transactions.xlsx"
 workbook = xl.load_workbook(path)
@@ -65,6 +66,24 @@ for row in range(2, sheet.max_row + 1):
 
 for row in sheet.iter_rows(values_only=True):
     print(row)
+
+# Style the rows with colors
+#from openpyxl.styles import PatternFill
+
+red_fill = PatternFill(start_color="FF9999", end_color="FF9999", fill_type="solid")
+green_fill = PatternFill(start_color="90EE90", end_color="90EE90", fill_type="solid")
+
+for row in range(2, sheet.max_row + 1):
+    price = sheet.cell(row, 3).value
+
+    for col in range(5,7):
+        if price > 20:
+            sheet.cell(row, col).fill = green_fill
+        else:
+            sheet.cell(row, col).fill = red_fill
+
+
+
 
 
 workbook.save('./others/transaction_updated_version2.xlsx')
