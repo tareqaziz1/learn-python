@@ -83,7 +83,4 @@ for row in range(2, sheet.max_row + 1):
             sheet.cell(row, col).fill = red_fill
 
 
-
-
-
-workbook.save('./others/transaction_updated_version2.xlsx')
+workbook.save('./others/transactions_updated_v2.xlsx')
