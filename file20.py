@@ -50,4 +50,4 @@ chart.add_data(values)
 chart.title = "| Discounted Price |"
 sheet.add_chart(chart, 'g2')
 
-workbook.save('./others/transaction_updated_version.xlsx')
+workbook.save('./others/transactions_updated_v1.xlsx')
