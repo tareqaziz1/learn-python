@@ -18,14 +18,19 @@ bar_chart.title = "Price per product"
 sheet.add_chart(bar_chart, "A25")
 
 
-pie = PieChart()        # Making a pie chart
+# Making a line chart
 
-data = Reference(sheet, min_col=6, min_row=1, max_row=3)
-labels = Reference(sheet, min_col=8, min_row=2, max_row=3)
+chart = LineChart()
+
+data = Reference(sheet, min_col=3, min_row=1, max_row=sheet.max_row)
+cats = Reference(sheet, min_col=1, min_row=2, max_row=sheet.max_row)
+
+chart.add_data(data, titles_from_data=True)
+chart.set_categories(cats)
+
+chart.title = "Price Trend"
+
+sheet.add_chart(chart, "J38")
 
 
-
-
-
-
-#workbook.save("./others/transactions_updated_v3.xlsx")
+workbook.save("./others/transactions_updated_v3.xlsx")
