@@ -1,3 +1,5 @@
+# built in methods
+
 ages = [23,25,21,26,28,32,28,30]
 
 # append method
