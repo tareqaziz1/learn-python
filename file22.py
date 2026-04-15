@@ -15,7 +15,7 @@ category = Reference(sheet, min_col=2, min_row=2, max_row=sheet.max_row)    # Ge
 bar_chart.add_data(data, titles_from_data=True)
 bar_chart.set_categories(category)
 bar_chart.title = "Price per product"
-sheet.add_chart(bar_chart, "A25")
+sheet.add_chart(bar_chart, "A25")  # Adding chart to the sheet in cell A25
 
 
 # Making a line chart
