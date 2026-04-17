@@ -1,8 +1,9 @@
-# Python Practice Exercises 🐍
+# Learn Python 🐍
 
 This repository contains beginner-level Python practice exercises to help new learners understand the basics of Python programming. The goal of this project is to build strong foundations through small, practical programs and simple projects.
 
 ## 📌 What You’ll Learn
+
 - Python syntax and basic concepts  
 - Variables and data types  
 - Tuple, list, dictionary
