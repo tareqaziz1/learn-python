@@ -47,7 +47,14 @@ print(square(5))    # without return it will return "None"
 def cube(number):
     return number ** 3
 
-print(cube(4))
+# Function that calculates average
+
+def average_cost(total_cost, number_of_items):
+    return total_cost / number_of_items
+
+print(average_cost(100, 5))
+
+print(cube(4))  #output - 20
 
 # Emoji converter function
 
