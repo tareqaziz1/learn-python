@@ -75,3 +75,9 @@ elif len(name) > 10:
 else:
     print("Name looks good!")
 
+
+price = float(input("price: "))
+country = input("where are you from? : ")
+is_member = True
+has_coupon = False
+
