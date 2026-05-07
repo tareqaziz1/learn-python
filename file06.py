@@ -76,8 +76,22 @@ else:
     print("Name looks good!")
 
 
-price = float(input("price: "))
+original_price = float(input("price: "))
+new_price = 0
+total_cost = 0
 country = input("where are you from? : ")
 is_member = True
 has_coupon = False
 
+
+if original_price >= 100:
+    if is_member:
+        new_price = original_price * 0.8         # 20% discount
+        if country.upper() in ['BELGIUM', 'GERMANY', 'NETHERLANDS']:
+            total_cost = new_price + 5
+        else:
+            total_cost = new_price + 10
+    else:
+        new_price = original_price * 0.9        # 10% discount
+
+print(total_cost)
