@@ -96,6 +96,7 @@ if original_price >= 100:
         if country.upper() in ['BELGIUM', 'GERMANY', 'NETHERLANDS']:
             total_cost = new_price + 10
         else:
-            total_cost= new_price + 20
+            total_cost= new_price + 20      #delivery fees 20
+
 
 print(total_cost)
