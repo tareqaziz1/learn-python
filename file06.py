@@ -93,5 +93,9 @@ if original_price >= 100:
             total_cost = new_price + 10
     else:
         new_price = original_price * 0.9        # 10% discount
+        if country.upper() in ['BELGIUM', 'GERMANY', 'NETHERLANDS']:
+            total_cost = new_price + 10
+        else:
+            total_cost= new_price + 20
 
 print(total_cost)
