@@ -112,5 +112,9 @@ ford1.start()
 ford1.engine(True)    # Now ford1 object has inherited methods (start, stop) and also its own method (engine).
 
 
+# Making a class of Calculate
 
-
+class Calculate:
+    def __int__(self, number1, number2):
+        self.number1 = number1
+        self.number2 = number2
