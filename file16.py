@@ -123,9 +123,12 @@ class Calculate:
         print(self.number1 + self.number2)
     def subtract(self):
         print(self.number1 - self.number2)
+    def multiply(self):
+        print(self.number1 * self.number2)
 
 calculation1 = Calculate(5,7)
 calculation1.add()
 calculation1.subtract()
+calculation1.multiply()
 
 
