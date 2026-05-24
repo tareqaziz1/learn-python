@@ -126,9 +126,16 @@ class Calculate:
     def multiply(self):
         print(self.number1 * self.number2)
 
+class ScientificCalculation(Calculate):
+    def power(self):
+        print(self.number1 ** self.number2)
+
+
 calculation1 = Calculate(5,7)
 calculation1.add()
 calculation1.subtract()
 calculation1.multiply()
 
 
+calc1 = ScientificCalculation(2,3)
+calc1.power()
