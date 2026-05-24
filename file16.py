@@ -128,7 +128,7 @@ class Calculate:
 
 class ScientificCalculation(Calculate):
     def power(self):
-        print(self.number1 ** self.number2)
+        print(f"the qube of {self.number1} is ", self.number1 ** self.number2)
 
 
 calculation1 = Calculate(5,7)
