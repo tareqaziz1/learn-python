@@ -130,6 +130,9 @@ class ScientificCalculation(Calculate):
     def power(self):
         print(f"the qube of {self.number1} is ", self.number1 ** self.number2)
 
+    def square_root(self):
+        print(f"SR1: {math.sqrt(self.number1)}, SR2: {math.sqrt(self.number2)}")
+
 
 calculation1 = Calculate(5,7)
 calculation1.add()
