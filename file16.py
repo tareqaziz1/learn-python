@@ -131,7 +131,7 @@ class ScientificCalculation(Calculate):
         print(f"the qube of {self.number1} is ", self.number1 ** self.number2)
 
     def square_root(self):
-        print(f"SR1: {math.sqrt(self.number1)}, SR2: {math.sqrt(self.number2)}")
+        print(f"SR1: {math.sqrt(self.number1)}, SR2: {math.sqrt(self.number2)}")   # Prints the square root of both numbers
 
 
 calculation1 = Calculate(5,7)
