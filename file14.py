@@ -77,6 +77,9 @@ message = input("> ")
 print(convert_to_emoji(message))
 
 
+# Callback function
+'''A callback function is essentially a function that you pass as an argument 
+to another function, with the expectation that it will be executed at a specific time. '''
 
 
 
