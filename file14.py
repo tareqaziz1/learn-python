@@ -81,9 +81,14 @@ print(convert_to_emoji(message))
 '''A callback function is essentially a function that you pass as an argument 
 to another function, with the expectation that it will be executed at a specific time. '''
 
+def upperCase(text):
+    return text.upper()
 
+def greet(name, upperCase):
+    greeting1 = upperCase(name)
+    print(f"Hello {greeting1}")
 
-
+greet("tareq", upperCase)
 
 
 
