@@ -82,13 +82,14 @@ print(convert_to_emoji(message))
 to another function, with the expectation that it will be executed at a specific time. '''
 
 def upperCase(text):
-    return text.upper()
+    return text.upper() # transforming the text to upper case letters.
 
 def greet(name, upperCase):
     greeting1 = upperCase(name)
     print(f"Hello {greeting1}")
 
 greet("tareq", upperCase)
+
 
 
 
