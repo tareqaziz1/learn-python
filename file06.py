@@ -52,6 +52,14 @@ else:
 If it is less than 10 then it's a very cold day,
 otherwise it's a normal day'''
 
+temperature = 12
+
+if temperature >= 30:
+    print("It's a hot day!")
+elif temperature <= 10:
+    print("It's a cold day!")
+else:
+    print("It's a normal day!")
 
 
 
@@ -93,3 +101,19 @@ if original_price >= 100:
 
 
 print(total_cost)
+
+'''
+Calculate the final price for a movie ticket based on age, student status, and showtime.
+
+Adults (18+):
+Students pay a base price of $12.00.
+Showtimes before 17:00 (5 PM) get a $3.00 discount.
+Evening showtimes pay the base price.
+Non-students pay a base price of $18.00.
+Showtimes before 17:00 get a $4.00 discount.
+Evening showtimes add a $2.00 prime-time surcharge.
+
+(Time format - 1300 = 1PM, 1400 = 2PM)
+
+'''
+
