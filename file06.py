@@ -52,14 +52,7 @@ else:
 If it is less than 10 then it's a very cold day,
 otherwise it's a normal day'''
 
-temperature = 30
 
-if temperature == 30: # == is an assignment operator
-    print("It's a hot day!")
-elif temperature < 10:
-    print("It's a very cold day!")
-else:
-    print("It's a normal day")
 
 
 '''If name is less than 3 character long, show name must be 3 character.
