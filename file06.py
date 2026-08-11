@@ -76,31 +76,27 @@ elif len(name) > 10:
 else:
     print("Name looks good!")
 
-
-original_price = float(input("price: "))
-new_price = 0
-total_cost = 0
-country = input("where are you from? : ")
-is_member = True
-has_coupon = False
-
-
+''''
+# Determine discount
 if original_price >= 100:
-    if is_member:
-        new_price = original_price * 0.8         # 20% discount
-        if country.upper() in ['BELGIUM', 'GERMANY', 'NETHERLANDS']:
-            total_cost = new_price + 5
-        else:
-            total_cost = new_price + 10
-    else:
-        new_price = original_price * 0.9        # 10% discount
-        if country.upper() in ['BELGIUM', 'GERMANY', 'NETHERLANDS']:
-            total_cost = new_price + 10
-        else:
-            total_cost= new_price + 20      #delivery fees 20
+    discount = 0.20 if is_member else 0.10
+else:
+    discount = 0.0
 
+new_price = original_price * (1 - discount)
 
+# Determine shipping
+is_neighbor = country.upper() in ['BELGIUM', 'GERMANY', 'NETHERLANDS']
+if is_member:
+    shipping = 5 if is_neighbor else 10
+else:
+    shipping = 10 if is_neighbor else 20
+
+total_cost = new_price + shipping
 print(total_cost)
+
+'''
+
 
 '''
 Calculate the final price for a movie ticket based on age, student status, and showtime.
@@ -117,3 +113,11 @@ Evening showtimes add a $2.00 prime-time surcharge.
 
 '''
 
+ticket_price = 12
+age = 19
+show_time = 1600
+
+if age >= 18:
+    if show_time < 1700:
+        new_ticket_price = ticket_price - 3
+        print(new_ticket_price)
