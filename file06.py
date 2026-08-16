@@ -105,8 +105,8 @@ Adults (18+):
 Students pay a base price of $12.00.
 Showtimes before 17:00 (5 PM) get a $3.00 discount.
 Evening showtimes pay the base price.
-Non-students pay a base price of $18.00.
-Showtimes before 17:00 get a $4.00 discount.
+Non-students pay a base price of $12.00 and extra $6.
+Showtimes before 17:00 get a 10% discount base ticket price.
 Evening showtimes add a $2.00 prime-time surcharge.
 
 (Time format - 1300 = 1PM, 1400 = 2PM)
@@ -114,10 +114,21 @@ Evening showtimes add a $2.00 prime-time surcharge.
 '''
 
 ticket_price = 12
-age = 19
-show_time = 1600
+age = 10
+is_student = False
+show_time = 1900
 
-if age >= 18:
+if age >= 18 and is_student:
     if show_time < 1700:
         new_ticket_price = ticket_price - 3
         print(new_ticket_price)
+    else:
+        new_ticket_price = ticket_price
+        print(new_ticket_price)
+elif age < 18 or is_student == False:
+    new_ticket_price = ticket_price + 6
+    print(new_ticket_price)
+    if show_time < 1700:
+        new_ticket_price = ticket_price * 0.9
+        print(new_ticket_price)
+
