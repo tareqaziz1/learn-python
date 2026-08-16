@@ -114,21 +114,22 @@ Evening showtimes add a $2.00 prime-time surcharge.
 '''
 
 ticket_price = 12
-age = 10
-is_student = False
+age = 18
+is_student = True
 show_time = 1900
 
 if age >= 18 and is_student:
     if show_time < 1700:
         new_ticket_price = ticket_price - 3
-        print(new_ticket_price)
+        print(f"price {new_ticket_price}")
     else:
         new_ticket_price = ticket_price
-        print(new_ticket_price)
+        print(f"price {new_ticket_price}")
 elif age < 18 or is_student == False:
     new_ticket_price = ticket_price + 6
-    print(new_ticket_price)
+    print(f"price {new_ticket_price}")
     if show_time < 1700:
         new_ticket_price = ticket_price * 0.9
-        print(new_ticket_price)
-
+        print(f"price {new_ticket_price}")
+else:
+    print(f"price {ticket_price}")
