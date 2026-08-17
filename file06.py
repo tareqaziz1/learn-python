@@ -78,23 +78,16 @@ else:
 
 ''''
 # Determine discount
-if original_price >= 100:
-    discount = 0.20 if is_member else 0.10
-else:
-    discount = 0.0
+"Write a program to calculate the total cost of an online order based on item price, membership status, and delivery country."
 
-new_price = original_price * (1 - discount)
+Rules:
+If the item price is $100 or more, members get a 20% discount.
+Delivery to Belgium, Germany, or the Netherlands costs $5.
+Delivery to all other countries costs $10.
 
-# Determine shipping
-is_neighbor = country.upper() in ['BELGIUM', 'GERMANY', 'NETHERLANDS']
-if is_member:
-    shipping = 5 if is_neighbor else 10
-else:
-    shipping = 10 if is_neighbor else 20
-
-total_cost = new_price + shipping
-print(total_cost)
-
+For non-members, they get 10% discount.
+Delivery to Belgium, Germany, or the Netherlands costs $10.
+Delivery to all other countries costs $20.
 '''
 
 
