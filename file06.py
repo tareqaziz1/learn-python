@@ -76,21 +76,6 @@ elif len(name) > 10:
 else:
     print("Name looks good!")
 
-''''
-# Determine discount
-"Write a program to calculate the total cost of an online order based on item price, membership status, and delivery country."
-
-Rules:
-If the item price is $100 or more, members get a 20% discount.
-Delivery to Belgium, Germany, or the Netherlands costs $5.
-Delivery to all other countries costs $10.
-
-For non-members, they get 10% discount.
-Delivery to Belgium, Germany, or the Netherlands costs $10.
-Delivery to all other countries costs $20.
-'''
-
-
 '''
 Calculate the final price for a movie ticket based on age, student status, and showtime.
 
@@ -126,3 +111,26 @@ elif age < 18 or is_student == False:
         print(f"price {new_ticket_price}")
 else:
     print(f"price {ticket_price}")
+
+''''
+# Determine discount
+"Write a program to calculate the total cost of an online order based on item price, membership status, and delivery country."
+
+Rules:
+If the item price is $100 or more, members get a 20% discount.
+Delivery to Belgium, Germany, or the Netherlands costs $5.
+Delivery to all other countries costs $10.
+
+For non-members, they get 10% discount.
+Delivery to Belgium, Germany, or the Netherlands costs $10.
+Delivery to all other countries costs $20.
+'''
+original_price = int(input("original price: "))
+is_Member = input("Are you a member? (y/n): ").lower().startswith('y')
+if is_Member:
+    print("yes")
+
+
+
+
+
