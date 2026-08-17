@@ -114,21 +114,40 @@ else:
 
 ''''
 # Determine discount
-"Write a program to calculate the total cost of an online order based on item price, membership status, and delivery country."
+"Write a program to calculate the total cost of an online order based on item price, 
+membership status, and delivery country."
 
 Rules:
 If the item price is $100 or more, members get a 20% discount.
 Delivery to Belgium, Germany, or the Netherlands costs $5.
 Delivery to all other countries costs $10.
 
-For non-members, they get 10% discount.
+For non-members, if the item price is $100 or more, they get 10% discount.
 Delivery to Belgium, Germany, or the Netherlands costs $10.
 Delivery to all other countries costs $20.
+
 '''
+
+
 original_price = int(input("original price: "))
 is_Member = input("Are you a member? (y/n): ").lower().startswith('y')
-if is_Member:
-    print("yes")
+location = input("Delivery location: ")
+benelux = ["Belgium", "Germany", "Netherlands"]
+
+if original_price >= 100 and is_Member:
+    price = original_price * 0.8       # 20% discounted
+    if location.lower() in benelux:
+        delivery_cost = 5
+        total_cost = price + delivery_cost
+        print("Total cost would be : ", total_cost)
+    else:
+        delivery_cost = 10
+        total_cost = price + delivery_cost
+        print("Total cost would be : ", total_cost)
+
+
+
+
 
 
 
