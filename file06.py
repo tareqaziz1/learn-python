@@ -129,21 +129,9 @@ Delivery to all other countries costs $20.
 '''
 
 
-original_price = int(input("original price: "))
-is_Member = input("Are you a member? (y/n): ").lower().startswith('y')
-location = input("Delivery location: ")
-benelux = ["Belgium", "Germany", "Netherlands"]
 
-if original_price >= 100 and is_Member:
-    price = original_price * 0.8       # 20% discounted
-    if location.lower() in benelux:
-        delivery_cost = 5
-        total_cost = price + delivery_cost
-        print("Total cost would be : ", total_cost)
-    else:
-        delivery_cost = 10
-        total_cost = price + delivery_cost
-        print("Total cost would be : ", total_cost)
+
+
 
 
 
