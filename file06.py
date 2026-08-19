@@ -128,7 +128,38 @@ Delivery to all other countries costs $20.
 
 '''
 
+# Get user inputs
+original_price = float(input("Enter original price: "))
+is_member = input("Are you a member? (y/n): ").strip().lower().startswith("y")
+location = input("Enter delivery country: ").strip().lower()
 
+# Define special delivery regions (in lowercase for case-insensitive matching)
+special_countries = ["belgium", "germany", "netherlands"]
+is_special_country = location in special_countries
+
+# Calculate discount
+if original_price >= 100:
+    discount_rate = 0.20 if is_member else 0.10
+else:
+    discount_rate = 0.0
+
+discounted_price = original_price * (1 - discount_rate)
+
+# Calculate delivery cost
+if is_member:
+    delivery_cost = 5 if is_special_country else 10
+else:
+    delivery_cost = 10 if is_special_country else 20
+
+# Compute total and display result
+total_cost = discounted_price + delivery_cost
+
+print(f"\n--- Order Summary ---")
+print(f"Original Price : ${original_price:.2f}")
+print(f"Discount       : {int(discount_rate * 100)}% (-${(original_price * discount_rate):.2f})")
+print(f"Discounted Item: ${discounted_price:.2f}")
+print(f"Delivery Fee   : ${delivery_cost:.2f}")
+print(f"Total Cost     : ${total_cost:.2f}")
 
 
 
