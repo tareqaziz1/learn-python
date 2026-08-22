@@ -33,6 +33,21 @@ secret_number = 7
 guess = 0
 guess_limit = 3
 
+while guess < guess_limit:
+    input_number = int(input("What is the secret number? : "))
+    guess += 1
+
+    if input_number == secret_number:
+        print("Congratulations ! Your guess is correct.")
+        break
+    elif guess == guess_limit:
+        print("Your guess is wrong! Try again !")
+        print("Thanks for playing !")
+
+    else:
+        print("Your guess is wrong. Try again ! ")
+
+
 ''''while guess < guess_limit:
     input_number = int(input("What is the secret number? : "))
     guess += 1
