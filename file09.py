@@ -65,3 +65,20 @@ for star in rows:
 
 for star in rows:
     print(star * 'x')
+
+'''
+Given the list prices = [12.50, 45.00, 8.00, 100.00, 24.50].
+
+Use a for loop to iterate through prices and calculate the subtotal.
+
+If is_member = True, apply a 10% discount to any single item priced at $20 or higher (items under $20 remain full price). 
+If is_member = False, all items are full price.
+
+Calculate and print the final total.
+'''
+
+product_prices = [12.50, 45.00, 8.00, 100.00, 24.50]
+is_Member = input("Are you a member? (Y/N) ").lower().startswith("y")
+
+
+
