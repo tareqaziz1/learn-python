@@ -79,6 +79,15 @@ Calculate and print the final total.
 
 product_prices = [12.50, 45.00, 8.00, 100.00, 24.50]
 is_Member = input("Are you a member? (Y/N) ").lower().startswith("y")
+subtotal = 0
+
+for i in product_prices:
+    if i >= 20 and is_Member:
+        subtotal += i * 0.9
+    else:
+        subtotal += i
+
+print(subtotal)
 
 
 
