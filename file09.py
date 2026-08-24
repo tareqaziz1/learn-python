@@ -87,7 +87,7 @@ for i in product_prices:
     else:
         subtotal += i
 
-print(subtotal)
+print(f'The total cost is : $ {subtotal}')
 
 
 
