@@ -165,6 +165,29 @@ print(f"Total Cost     : ${total_cost:.2f}")
 
 
 
+'''
+Write a Python script that calculates the extra fee for a piece of luggage based on its weight and passenger status.
+
+Rules:
+
+Standard Allowances:
+Economy: Free up to 23 kg.
+Business: Free up to 32 kg.
+
+Overweight Surcharges (Beyond Free Allowance):
+
+First 5 kg over limit: $10 per kg.
+Any weight beyond 5 kg over the limit: $20 per kg for those additional kilograms.
+
+VIP & Absolute Limit Conditions:
+
+If has_gold_card = True, the passenger gets an extra 5 kg added to their base free allowance, and receives a flat $15 discount off the total calculated extra fee (the final fee cannot go below $0).
+
+Hard Cap: Any bag strictly over 40 kg is rejected with "REJECTED: Too Heavy" regardless of ticket class or card status (no fee calculated).'''
+
+ticket_class = input("What is your ticket class? : ")
+weight = int(input("What's the weight of the luggage : "))
+is_goldCardHolder = input("Do you have a gold card? (Yes/No): ").lower().startswith('y')
 
 
 
