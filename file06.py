@@ -192,11 +192,17 @@ weight = int(input("What's the weight of the luggage : "))
 fee = 0
 
 if weight > 40:
-    print("Rejected, Too heavy, No fee calculated")
+    print("Rejected, Too heavy, No fee calculated.")
 else:
-    if weight <= economy_weight:
+    if weight <= allotted_weight:
         print("No fee! Good to go.")
-    #elif weight == economy_weight + 5:
+    else:
+        if weight > allotted_weight and weight <= allotted_weight + 5:
+            fee = (weight - allotted_weight) * 10
+            print(f"Calculate fee is $ {fee}")
+        else:
+
+
 
 
 
