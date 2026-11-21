@@ -187,7 +187,17 @@ Hard Cap: Any bag strictly over 40 kg is rejected with "REJECTED: Too Heavy" reg
 
 ticket_class = input("What is your ticket class? : ")
 weight = int(input("What's the weight of the luggage : "))
-is_goldCardHolder = input("Do you have a gold card? (Yes/No): ").lower().startswith('y')
+is_GoldCardHolder = input("Do you have a gold card? (Yes/No): ").lower().startswith('y')
+fee = 0
+economy_weight = 23
+business_weight = 32
+
+if weight > 40:
+    print("Rejected, Too heavy, No fee calculated")
+else:
+    if weight <= economy_weight:
+        print("No fee! Good to go.")
+    elif weight == economy_weight + 5:
 
 
 

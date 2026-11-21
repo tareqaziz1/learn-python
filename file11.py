@@ -77,3 +77,4 @@ for x in arr1:
 print(even)
 print(odd)
 
+
