@@ -185,19 +185,18 @@ If has_gold_card = True, the passenger gets an extra 5 kg added to their base fr
 
 Hard Cap: Any bag strictly over 40 kg is rejected with "REJECTED: Too Heavy" regardless of ticket class or card status (no fee calculated).'''
 
-ticket_class = input("What is your ticket class? : ")
-weight = int(input("What's the weight of the luggage : "))
+allotted_weight = [23, 32][input("What is your ticket class? : ").lower().startswith("b")]
 is_GoldCardHolder = input("Do you have a gold card? (Yes/No): ").lower().startswith('y')
+weight = int(input("What's the weight of the luggage : "))
+
 fee = 0
-economy_weight = 23
-business_weight = 32
 
 if weight > 40:
     print("Rejected, Too heavy, No fee calculated")
 else:
     if weight <= economy_weight:
         print("No fee! Good to go.")
-    elif weight == economy_weight + 5:
+    #elif weight == economy_weight + 5:
 
 
 
