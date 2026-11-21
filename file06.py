@@ -201,6 +201,9 @@ else:
             fee = (weight - allotted_weight) * 10
             print(f"Calculate fee is $ {fee}")
         else:
+            extra_fee = (weight - 28) * 20
+            fee = extra_fee + 50
+            print(f"Calculate fee is $ {fee}")
 
 
 
