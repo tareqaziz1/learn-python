@@ -74,7 +74,7 @@ for x in arr1:
     else:
         odd.append(x)
 
-print(even)
-print(odd)
+print(f"even: {even}")
+print(f"odd: {odd}")
 
 
