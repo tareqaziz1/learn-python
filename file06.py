@@ -191,6 +191,8 @@ weight = int(input("What's the weight of the luggage : "))
 
 fee = 0
 
+
+
 if weight > 40:
     print("Rejected, Too heavy, No fee calculated.")
 else:

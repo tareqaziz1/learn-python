@@ -89,5 +89,18 @@ for i in product_prices:
 
 print(f'The total cost is : $ {subtotal}')
 
+# Assign a random roll number from the list to a student
+
+import random
+
+student_name = ["John", "Rob", "Charlie", "Jenifer", "Zain"]
+roll_number = [201,202,203,204,205]
+
+random.shuffle(roll_number)
+
+for i in student_name:
+    for j in roll_number:
+        if student_name.index(i) == roll_number.index(j):
+            print(f"{i} {j}")
 
 
