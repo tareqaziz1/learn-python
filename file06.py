@@ -191,6 +191,8 @@ weight = int(input("What's the weight of the luggage : "))
 
 fee = 0
 
+print(allotted_weight)
+print(is_GoldCardHolder)
 
 
 
