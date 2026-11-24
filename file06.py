@@ -193,21 +193,6 @@ fee = 0
 
 
 
-if weight > 40:
-    print("Rejected, Too heavy, No fee calculated.")
-else:
-    if weight <= allotted_weight:
-        print("No fee! Good to go.")
-    else:
-        if weight > allotted_weight and is_GoldCardHolder:
-            new_allotted_weight = allotted_weight + 5
-            if weight <= new_allotted_weight + 5:
-                fee = (weight - allotted_weight) * 10
-                print(f"Calculate fee is $ {fee}")
-        else:
-            extra_fee = (weight - 28) * 20
-            fee = extra_fee + 50
-            print(f"Calculate fee is $ {fee}")
 
 
 
